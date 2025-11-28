@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background: #f4f6f9;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #2c3e50;
+      color: #fff;
+      width: 220px;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+    .sidebar h2 {
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: #fff;
+      padding: 15px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Content area */
+    .content {
+      flex: 1;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* Cards */
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    /* Responsive sidebar */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        text-align: center;
+      }
+      .main {
+        flex: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Marks</a></li>
+      <li><a href="#">Notifications</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <!-- Top bar -->
+    <div class="topbar">
+      <h2>Welcome, Student</h2>
+    </div>
+
+    <!-- Content area -->
+    <div class="content">
+      <div class="card">
+        <h3>Quick Stats</h3>
+        <p>Courses Enrolled: 5</p>
+        <p>Average Marks: 82%</p>
+      </div>
+      <div class="card">
+        <h3>Notifications</h3>
+        <p>Assignment due tomorrow</p>
+        <p>Exam schedule released</p>
+      </div>
+      <div class="card">
+        <h3>Recent Activities</h3>
+        <p>Submitted Math Assignment</p>
+        <p>Viewed Physics Lecture</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
